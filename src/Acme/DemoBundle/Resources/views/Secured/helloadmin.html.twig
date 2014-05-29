@@ -1,0 +1,13 @@
+{% extends "AcmeDemoBundle:Secured:layout.html.twig" %}
+
+{% block title "Hello " ~ name %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1 class="title">Hello {{ name }} secured for Admins only!</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,0 +1,18 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "Symfony - Demos" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1 class="title">Available demos</h1>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="{{ path('_demo_hello', {'name': 'World'}) }}">Hello World</a></li>
+            <li class="list-group-item"><a href="{{ path('_demo_secured_hello', {'name': 'World'}) }}">Access the secured area</a> <a href="{{ path('_demo_login') }}">Go to the login page</a></li>
+            {# <li><a href="{{ path('_demo_contact') }}">Send a Message</a></li> #}
+        </ul>
+    </div>
+{% endblock %}

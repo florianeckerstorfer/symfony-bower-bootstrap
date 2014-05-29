@@ -1,0 +1,15 @@
+{% extends "AcmeDemoBundle:Secured:layout.html.twig" %}
+
+{% block title "Hello " ~ name %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1 class="title">Hello {{ name }}!</h1>
+        </div>
+
+        <p class="lead"><a href="{{ path('_demo_secured_hello_admin', { 'name': name }) }}">Hello resource secured for <strong>admin</strong> only.</a></p>
+    </div>
+{% endblock %}
+
+{% set code = code(_self) %}
